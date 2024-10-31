@@ -1,0 +1,95 @@
+<div class="wrapper">
+  <div class="options-wrapper">
+    <div class="options-block noborder">
+      <button class="button bg-green do" enabled="true" style="padding: 15px 0; font-size: 28px; width: 100%;">
+        <img src="<?php echo PLUGIN_URL; ?>images/key.png" style="margin: 0 10px 0 0;" />Сгенерировать
+      </button>
+    </div>
+    <div class="options-block" style="padding-bottom: 15px;">
+      <h3>Базовая настройка</h3>
+      <div class="label" style="margin: 20px 0 5px 0;">Длина пароля:</div>
+      <div class="numericbox password-length" value="15" minimum="4" maximum="99" step="1">
+        <input type="text" class="value" />
+        <button class="arrow up bg-blue"></button>
+        <button class="arrow down bg-blue"></button>
+        <div class="add-text">
+          <!--Additional text-->
+        </div>
+      </div>
+    </div>
+    <div class="options-block" style="padding-bottom: 5px;">
+      <span class="checkbox norepeat" state="unchecked" enabled="true" style="font-weight:bold;">
+        <span class="check"></span>
+        <span class="text">Не допускать повторений</span>
+      </span>
+      <span class="checkbox usesigns" state="unchecked" enabled="true" style="font-weight:bold;">
+        <span class="check"></span>
+        <span class="text">Использовать знаки</span>
+      </span>
+      <span class="checkbox usecyr" state="unchecked" enabled="true">
+        <span class="check"></span>
+        <span class="text">Использовать кириллицу</span>
+      </span>
+    </div>
+    <div class="options-block" style="padding-bottom: 5px;">
+      <h3 class="advanced-options">Расширенная настройка</h3>
+      <div class="advanced-options invisible">
+        <div class="label" style="margin: 0 0 5px 0;">Доля букв:</div>
+        <div class="numericbox letters-percent" value="70" minimum="0" maximum="100" step="1" style="margin-bottom: 15px">
+          <input type="text" class="value" />
+          <button class="arrow up bg-blue"></button>
+          <button class="arrow down bg-blue"></button>
+          <div class="add-text">%</div>
+        </div>
+        <div class="label" style="margin: 20px 0 5px 0;">Доля цифр:</div>
+        <div class="numericbox digits-percent" value="30" minimum="0" maximum="100" step="1" style="margin-bottom: 15px">
+          <input type="text" class="value" />
+          <button class="arrow up bg-blue"></button>
+          <button class="arrow down bg-blue"></button>
+          <div class="add-text">%</div>
+        </div>
+        <div class="label" style="margin: 20px 0 5px 0;">Доля специальных знаков:</div>
+        <div class="numericbox signs-percent" value="0" minimum="0" maximum="100" step="1" enabled="false" style="margin-bottom: 15px">
+          <input type="text" class="value" />
+          <button class="arrow up bg-blue"></button>
+          <button class="arrow down bg-blue"></button>
+          <div class="add-text">%</div>
+        </div>
+        <span class="checkbox useshuffle" state="unchecked" enabled="true">
+          <span class="check"></span>
+          <span class="text">Перемешивать</span>
+        </span>
+        <div class="shuffle-options invisible">
+          <div class="numericbox shuffle-rounds" value="3" minimum="1" maximum="99" step="1" style="margin-bottom: 15px">
+            <input type="text" class="value" />
+            <button class="arrow down bg-blue"></button>
+            <button class="arrow up bg-blue"></button>
+            <div class="add-text">раза</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="options-block passwords-counter">Всего создано пользователями <span id="passwordsCounter"></span> паролей</div>
+    <a href="http://sadesign.pro" title="Генератор безопасных паролей онлайн">
+      <img src="<?php echo PLUGIN_URL; ?>images/ecodelogo.png" style="margin-top: 25px; margin-left: 108px;" />
+    </a>
+  </div>
+  <div class="main-wrapper">
+    <div style="margin: 20px 0 30px 0; line-height: 30px;">
+      <h3>Результат сгенерированных паролей</h3>
+      <span style="color: #666;">Ниже появится список паролей, когда вы нажмете <strong>«Сгенерировать»</strong></span>
+    </div>
+    <ul class="result-list">
+      <li class="result-item example">
+        <div class="entropy" title="Сложность пароля"></div>
+        <div class="password">
+          <span class="value" title="Нажмите чтобы выделить"></span>
+          <span class="time" title="Прогноз времени подбора пароля"></span>
+          <span class="hash base64" title="Base64"></span>
+          <span class="hash md5" title="MD5"></span>
+        </div>
+        <div class="overflow-gradient"></div>
+      </li>
+    </ul>
+  </div>
+</div>

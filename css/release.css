@@ -1,0 +1,363 @@
+﻿div.wrapper button, input {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  outline:0 none;
+}
+
+div.wrapper h3 {
+  font-weight:normal;
+  margin: 0;
+  font-size: 24px;
+  line-height:30px;
+}
+
+div.wrapper {
+  width:980px;
+  max-width: 100%;
+  margin:0 auto;
+  padding:10px 0;
+  line-height:normal;
+  font-family: Arial;
+  font-size: 13px;
+  top: 0;
+}
+div.wrapper:after,
+div.wrapper:before {
+  content: '';
+  display: table;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+div.options-wrapper {
+  width:315px;
+  max-width: 35%;
+  height:100%;
+  float:left;
+}
+
+div.advanced-options {
+  margin:20px 0 0 0;
+}
+
+div.wrapper h3.advanced-options {
+  cursor:pointer;
+  padding-right:15px;
+  background:url(../images/plusminus.png) right 0 no-repeat;
+
+  font-size: 21px;
+}
+
+div.wrapper h3.advanced-options.selected {
+  background:url(../images/plusminus.png) right -30px no-repeat
+}
+
+div.main-wrapper {
+  margin:0 0 0 10px;
+  float:left;
+
+  width: 655px;
+  max-width: 65%;
+}
+
+div.label {
+  color:#666;
+  margin:5px 0;
+}
+
+div.options-block {
+  margin:20px 20px 0 0;
+  border-bottom:1px solid #e5e5e5;
+}
+
+div.slider {
+  width:295px;
+}
+
+.invisible, .example {
+  display:none;
+}
+
+.noborder {
+  border: 0 none;
+}
+
+/*#region Colors*/
+.bg-green {
+  background-color:#00A300 !important;
+}
+
+.bg-green:hover {
+  background-color:#00BD00 !important;
+}
+
+.bg-blue {
+  background-color:#0066cc !important;
+}
+
+.bg-blue:hover {
+  background-color:#0076ec !important;
+}
+
+.bg-light-blue {
+  background-color:#0099ff !important;
+}
+
+.bg-ligth-blue:hover {
+  background-color:#00b1ff !important;
+}
+
+.bg-gray {
+  background-color:#515151 !important;
+}
+
+.bg-gray:hover {
+  background-color:#5e5e5e !important;
+}
+
+.bg-orange {
+  background-color:#e3a21a !important;
+}
+
+.bg-orange:hover {
+  background-color:#ffbc1e !important;
+}
+
+.bg-red {
+  background-color:#d84937 !important;
+}
+
+.bg-red:hover {
+  background-color:#fa5540 !important;
+}
+
+/* .green {
+    color:#00A300 !important;
+} */
+/*#endregion*/
+
+/*#region Button*/
+.button {
+  background-color: #2D89EF;
+  color: #FFFFFF;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+button[enabled=false] {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.button[enabled=true]:hover {
+  background-color: #2774cc;
+  cursor: pointer;
+}
+/*#endregion*/
+
+/*#region CheckBox*/
+.checkbox {
+  display: block;
+  cursor: pointer;
+  /*Advanced properties*/
+  color:#666;
+  margin-bottom:10px;
+}
+
+.checkbox[enabled=false] .text {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.checkbox span {
+  display: block;
+}
+
+.checkbox .text {
+  line-height:22px;
+  margin: 0 0 0 27px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox .check {
+  height: 22px;
+  width: 22px;
+  float: left;
+}
+
+.checkbox[state=unchecked][enabled=true] .check {
+  background: url(../images/checkbox.png) left 0px no-repeat;
+}
+
+.checkbox[state=checked][enabled=true] .check {
+  background: url(../images/checkbox.png) left -22px no-repeat;
+}
+
+.checkbox[state=indeterminate][enabled=true] .check {
+  background: url(../images/checkbox.png) left -44px no-repeat;
+}
+
+.checkbox[state=unchecked][enabled=false] .check {
+  background: url(../images/checkbox.png) left -66px no-repeat;
+}
+
+.checkbox[state=checked][enabled=false] .check {
+  background: url(../images/checkbox.png) left -88px no-repeat;
+}
+
+
+.checkbox[state=indeterminate][enabled=false] .check {
+  background: url(../images/checkbox.png) left -110px no-repeat;
+}
+/*#endregion*/
+
+/*#region Result List*/
+ul.result-list {
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+
+li.result-item {
+  position:relative;
+  border-bottom:1px solid #dcdcdc;
+  padding:5px 0 !important;
+  margin:25px 0 0 0 !important;
+  overflow:hidden;
+}
+li.result-item:before {
+  content: none !important;
+}
+
+li.result-item .password {
+  margin:0 0 0 100px;
+}
+
+li.result-item .entropy {
+  float:left;
+  width:80px;
+  height:50px;
+  line-height:50px;
+  color:#FFF;
+  font-size:30px;
+  text-align:center;
+}
+
+li.result-item .password, li.result-item .hashes {
+  border-left:1px solid #dcdcdc;
+  padding:0 0 0 20px;
+}
+
+li.result-item .password span {
+  display:block;
+  cursor:default;
+}
+
+li.result-item .password span.value {
+  font-size:22px;
+  margin:0 0 10px 0;
+}
+
+li.result-item .password span.time {
+  background: url(../images/clock.png) no-repeat 0 50%;
+}
+
+li.result-item .password span.base64 {
+  background: url(../images/base64.png) no-repeat 0 50%;
+}
+
+li.result-item .password span.md5 {
+  background: url(../images/md5.png) no-repeat 0 50%;
+}
+
+li.result-item .password span.hash, li.result-item .password span.time {
+  font-size:12px;
+  line-height:16px;
+  color:#666;
+  opacity:0.5;
+  filter:alpha(opacity=50);
+  padding:0 0 0 42px;
+}
+
+li.result-item .password span.hash:hover, li.result-item .password span.time:hover {
+  opacity:1;
+  filter:alpha(opacity=100);
+}
+
+li.result-item .overflow-gradient {
+  position:absolute;
+  top:0;
+  right:0;
+  height:100%;
+  width:30px;
+  background: url(../images/overgrad.png) repeat-y;
+}
+/*#endregion*/
+
+/*#region NumericBox*/
+.numericbox {
+  height:32px;
+}
+
+.numericbox * {
+  float:left;
+}
+.numericbox input.value {
+  height:32px;
+  width:50px;
+  line-height:32px;
+  padding:0 10px;
+  text-align:right;
+  font-size:16px;
+  background-color:#eaeaea;
+  color:#515151;
+}
+
+.numericbox button.arrow {
+  width:32px;
+  height:32px;
+  background-color:#c2c2c2;
+  background-image: url(../images/prog_arrows.png);
+  margin-left:2px;
+  cursor:pointer;
+}
+
+.numericbox button.arrow:disabled {
+  cursor:default;
+  background-color:#c2c2c2 !important;
+}
+
+.numericbox button.up {
+  background-position:-32px 0;
+}
+
+.numericbox button.down {
+  background-position:0 0;
+}
+
+.numericbox div.add-text {
+  height:32px;
+  line-height:32px;
+  margin-left:5px;
+  font-size:16px;
+  color:#515151;
+}
+/*#endregion*/
+
+/*#region Counter*/
+div.passwords-counter {
+  margin: 20px 20px 20px 0;
+  border:0 none;
+}
+
+div.passwords-counter span#passwordsCounter {
+  font-weight:bold;
+}
+/*#endregion*/
